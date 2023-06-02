@@ -29,22 +29,23 @@ class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['email' , 'username' , 'password' , 'password2']
-
-        def validate(self, attrs):
-            if attrs['password'] != attrs['password2']:
-                raise serializers.ValidationError(
-                    {"password" : "Password fields does not match"}
-                )
-            return attrs
         
-        def create(self, validated_data):
-            user = User.objects.create(
-                username = validated_data['username'],
-                email = validated_data['email'],
+        
+    def validate(self, attrs):
+        if attrs['password'] != attrs['password2']:
+            raise serializers.ValidationError(
+                {"password" : "Password fields does not match"}
+                )
+        return attrs
+        
+    def create(self, validated_data):
+        user = User.objects.create(
+            username = validated_data['username'],
+            email = validated_data['email'],
             )
-            user.set_password(validated_data['password'])
-            user.save()
+        user.set_password(validated_data['password'])
+        user.save()
 
-            return user
+        return user
 
     
