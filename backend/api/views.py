@@ -24,7 +24,7 @@ def dashboard(request):
         return Response({'response': response}, status=status.HTTP_200_OK)
     elif request.method == "POST":
         text = request.POST.get("text")
-        response = f"Hey {request.user}, Your tesxt is {text}"
+        response = f"Hey {request.user}, Your text is {text}"
         return Response({"response": response}, status=status.HTTP_200_OK)
     
     return Response({'response': response}, status=status.HTTP_400_BAD_REQUEST)
