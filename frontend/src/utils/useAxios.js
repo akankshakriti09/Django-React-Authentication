@@ -12,7 +12,7 @@ const useAxios = () => {
     const axiosInstance = axios.create({
         baseURL ,
         headers : {Authorization: 'Bearer ${authTokens?.access}'}
-    })
+    }).access
 
     axiosInstance.interceptors.request.use(async req => {
         const user = jwt_decode(authTokens.access)
@@ -20,6 +20,20 @@ const useAxios = () => {
 
         if (isExpired) return req
 
-        const response = await axios.post(``)
+        const response = await axios.post(`$(baseURL)/token/refresh/`, {
+            refresh : authTokens.refresh
+        })
+        localStorage.setItem("authToken", JSON.stringify(response.data))
+        //localStorage.setItem("authToken", JSON.stringify(response.data))
+
+        setAuthTokens(response.data)
+        setUser(jwt_decode(response.data.access))
+
+        req.headers.Authorization = `Bearer $(response.data.access)`
+        return req
     })
+
+    return axiosInstance
 }
+
+export default useAxios
