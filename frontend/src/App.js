@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import PrivateRoute from "./utils/PrivateRoute"
 import { AuthProvider } from './context/AuthContext'
 import Homepage from "./views/Homepage"
@@ -7,15 +7,27 @@ import Registerpage from "./views/Registerpage"
 import Loginpage from "./views/Loginpage"
 import Dashboard from "./views/Dashboard"
 import Navbar from "./views/Navbar"
+import './App.css';
 
 function App() {
   return (
     <Router>
       <AuthProvider>
-
+        < Navbar />
+        <Routes>
+          <Route exact path='/dashboard' element={<PrivateRoute/>}></Route>
+          {/* <PrivateRoute component={Dashboard} path="/dashboard" exact /> */}
+          < Route exact path='/' element={<Homepage/>}/>
+          <Route exact path='/register' element={<Registerpage/>}/>
+          <Route exact path='/login' element={<Loginpage/>}/>
+          <Route exact path='/' element={<Homepage/>}/>
+          {/* <Route component={Loginpage} path="/login" />
+          <Route component={Registerpage} path="/register" exact />
+          <Route component={Homepage} path="/" exact /> */}
+        </Routes>
       </AuthProvider>
     </Router>
-  );
+  )
 }
 
 export default App;
