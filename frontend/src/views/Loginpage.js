@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import bgImg from "../images/loginimg.jpg";
-import { Link } from "react-router-dom";
+import { Link , withRouter } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+
 
 function Loginpage() {
 
@@ -136,4 +137,4 @@ function Loginpage() {
   );
 }
 
-export default Loginpage;
+export default withRouter(Loginpage);
