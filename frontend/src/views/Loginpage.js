@@ -104,9 +104,6 @@ function Loginpage() {
                             <Link to="/register" style={{ color: "#393f81" }}>
                               Register Now
                             </Link>
-                            {/* <Link to="/register" style={{ color: "#393f81" }}>
-                        Register Now 
-                      </Link> */}
                           </p>
                           <a href="#!" className="small text-muted">
                             Terms of use.&nbsp;

@@ -16,7 +16,6 @@ function App() {
         < Navbar />
         <Routes>
           <Route exact path='/dashboard' element={<PrivateRoute/>}></Route>
-          <Route exact path='/' element={<Homepage/>}/>
           <Route exact path='/register' element={<Registerpage/>}/>
           <Route exact path='/login' element={<Loginpage/>}/>
           <Route exact path='/' element={<Homepage/>}/>
