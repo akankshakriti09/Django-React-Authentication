@@ -16,14 +16,10 @@ function App() {
         < Navbar />
         <Routes>
           <Route exact path='/dashboard' element={<PrivateRoute/>}></Route>
-          {/* <PrivateRoute component={Dashboard} path="/dashboard" exact /> */}
-          < Route exact path='/' element={<Homepage/>}/>
+          <Route exact path='/' element={<Homepage/>}/>
           <Route exact path='/register' element={<Registerpage/>}/>
           <Route exact path='/login' element={<Loginpage/>}/>
           <Route exact path='/' element={<Homepage/>}/>
-          {/* <Route component={Loginpage} path="/login" />
-          <Route component={Registerpage} path="/register" exact />
-          <Route component={Homepage} path="/" exact /> */}
         </Routes>
       </AuthProvider>
     </Router>
