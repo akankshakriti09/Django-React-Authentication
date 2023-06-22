@@ -5,7 +5,7 @@ import AuthContext from "../context/AuthContext";
 
 function Registerpage() {
 
-  const [email, setEmail] = useState("ak@gmail.com")
+  const [email, setEmail] = useState("")
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
@@ -46,7 +46,7 @@ function Registerpage() {
                     
                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
                        <div className="card-body p-4 p-lg-5 text-black">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                           <div className="d-flex align-items-center mb-3 pb-1">
                             <i
                               className="fas fa-cubes fa-2x me-3"
