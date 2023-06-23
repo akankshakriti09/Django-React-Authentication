@@ -15,7 +15,9 @@ function App() {
       <AuthProvider>
         < Navbar />
         <Routes>
-          <Route exact path='/dashboard' element={<PrivateRoute/>}></Route>
+          <Route element={<PrivateRoute />}>
+            <Route element={<Dashboard/ >} exact path='/dashboard' />
+          </Route>
           <Route exact path='/register' element={<Registerpage/>}/>
           <Route exact path='/login' element={<Loginpage/>}/>
           <Route exact path='/' element={<Homepage/>}/>
