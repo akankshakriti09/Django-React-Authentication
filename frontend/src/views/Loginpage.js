@@ -6,7 +6,7 @@ import AuthContext from "../context/AuthContext";
 function Loginpage() {
 
   const {loginUser} = useContext(AuthContext)
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value

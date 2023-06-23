@@ -6,12 +6,12 @@ import logoImg from '../images/wolf.png';
 
 function Navbar() {
 
-  const {user, logoutUser} = useContext(AuthContext)
+  const {logoutUser} = useContext(AuthContext)
   const token = localStorage.getItem("authTokens")
 
   if (token){
     const decoded = jwt_decode(token) 
-    var user_id = decoded.user_id
+    // var user_id = decoded.user_id
   }
 
   return (
