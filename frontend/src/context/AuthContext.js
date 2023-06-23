@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
 
         } else {    
             console.log(response.status);
-            console.log("there was a server issue");
+            console.log("There was a server issue");
             swal.fire({
                 title: "Username or passowrd does not exists",
                 icon: "error",
@@ -93,7 +93,7 @@ export const AuthProvider = ({ children }) => {
             })
         } else {
             console.log(response.status);
-            console.log("there was a server issue");
+            console.log("There was a server issue");
             swal.fire({
                 title: "An Error Occured " + response.status,
                 icon: "error",
