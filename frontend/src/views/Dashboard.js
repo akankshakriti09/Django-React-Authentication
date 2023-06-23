@@ -4,18 +4,18 @@ import jwtDecode from 'jwt-decode'
 
 function Dashboard() {
 
-    // const [res, setRes] = useState("")
-    // const api = useAxios();
-    // const token = localStorage.getItem("authTokens")
+    const [res, setRes] = useState("")
+    const api = useAxios();
+    const token = localStorage.getItem("authTokens")
 
-    // if (token){
-    //   const decode = jwtDecode(token)
-    //   var user_id = decode.user_id
-    //   var username = decode.username
-    //   var full_name = decode.full_name
-    //   var image = decode.image
+    if (token){
+      const decode = jwtDecode(token)
+      var user_id = decode.user_id
+      var username = decode.username
+      var full_name = decode.full_name
+      var image = decode.image
 
-    // }
+    }
 
     // useEffect(() => {
     //   const fetchData = async () => {

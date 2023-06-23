@@ -12,7 +12,7 @@ const useAxios = () => {
     const axiosInstance = axios.create({
         baseURL ,
         headers : {Authorization: 'Bearer ${authTokens?.access}'}
-    }).access
+    })
 
     axiosInstance.interceptors.request.use(async req => {
         const user = jwt_decode(authTokens.access)
