@@ -28,7 +28,7 @@ function Registerpage() {
     <div>
       
       <>
-        <section className="vh-90">
+        <section className="vh-90" style={{marginTop:'10vh'}}>
           <div className="container py-4 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col col-xl-10">
