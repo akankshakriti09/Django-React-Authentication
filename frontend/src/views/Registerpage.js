@@ -40,7 +40,7 @@ function Registerpage() {
                         src={bgImg}
                         alt="login form"
                         className="img-fluid"
-                        style={{ borderRadius: "1rem 0 0 1rem" }}
+                        style={{ borderRadius: "1rem 0 0 1rem" , height:"700px" }}
                       />
                     </div>
                     
