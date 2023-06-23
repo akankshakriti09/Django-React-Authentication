@@ -23,8 +23,8 @@ const useAxios = () => {
         const response = await axios.post(`$(baseURL)/token/refresh/`, {
             refresh : authTokens.refresh
         })
-        localStorage.setItem("authToken", JSON.stringify(response.data))
-        //localStorage.setItem("authToken", JSON.stringify(response.data))
+        localStorage.setItem("authTokens", JSON.stringify(response.data))
+        localStorage.setItem("authTokens", JSON.stringify(response.data))
 
         setAuthTokens(response.data)
         setUser(jwt_decode(response.data.access))

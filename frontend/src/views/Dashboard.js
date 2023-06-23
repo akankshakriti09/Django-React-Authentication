@@ -17,32 +17,32 @@ function Dashboard() {
 
     }
 
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try{
-    //       const response = await api.get("/test/")
-    //       setRes(response.data.response)
-    //     } catch (error) {
-    //       console.log(error);
-    //       setRes("Something went wrong")
-    //     }
-    //   }
-    //   fetchData()
-    // }, [])
+    useEffect(() => {
+      const fetchData = async () => {
+        try{
+          const response = await api.get("/test/")
+          setRes(response.data.response)
+        } catch (error) {
+          console.log(error);
+          setRes("Something went Wrong")
+        }
+      }
+      fetchData()
+    }, [])
 
     
-    // useEffect(() => {
-    //   const fetchPostData = async () => {
-    //     try{
-    //       const response = await api.post("/test/")
-    //       setRes(response.data.response)
-    //     } catch (error) {
-    //       console.log(error);
-    //       setRes("Something went wrong")
-    //     }
-    //   }
-    //   fetchPostData()
-    // }, [])
+    useEffect(() => {
+      const fetchPostData = async () => {
+        try{
+          const response = await api.post("/test/")
+          setRes(response.data.response)
+        } catch (error) {
+          console.log(error);
+          setRes("Something went wrong")
+        }
+      }
+      fetchPostData()
+    }, [])
 
 
   return (
