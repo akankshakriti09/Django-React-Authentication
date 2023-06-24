@@ -32,7 +32,7 @@ function Registerpage() {
           <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col col-xl-10">
-                <div className="card" style={{ borderRadius: "1rem" }}>
+                <div className="card" style={{ borderRadius: "1rem" , height:"580px"}}>
                   
                   <div className="row g-0">
                     <div className="col-md-6 col-lg-5 d-none d-md-block">
@@ -40,7 +40,7 @@ function Registerpage() {
                         src={bgImg}
                         alt="login form"
                         className="img-fluid"
-                        style={{ borderRadius: "1rem 0 0 1rem" , height:"700px" }}
+                        style={{ borderRadius: "1rem 0 0 1rem" , height:"575px" }}
                       />
                     </div>
                     
@@ -52,17 +52,17 @@ function Registerpage() {
                               className="fas fa-cubes fa-2x me-3"
                               style={{ color: "#ff6219" }}
                             />
-                            <span className="h2 fw-bold mb-2">
+                            <span className="h2 fw-bold mb-0">
                               Welcome to this Website !!
                             </span>
                           </div>
                           <h5
-                            className="fw-normal mb-2 pb-3"
+                            className="fw-normal pb-2"
                             style={{ letterSpacing: 1 }}
                           >
                             <b>Sign Up</b>
                           </h5>
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-3">
                             <input
                               type="email"
                               id="form2Example17"
@@ -71,7 +71,7 @@ function Registerpage() {
                               onChange={(e) => setEmail(e.target.value)}
                             />
                           </div>
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-3">
                             <input
                               type="text"
                               id="form2Example17"
@@ -80,7 +80,7 @@ function Registerpage() {
                               onChange={(e) => setUsername(e.target.value)}
                             />
                           </div>
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-3">
                             <input
                               type="password"
                               id="form2Example17"
@@ -90,7 +90,7 @@ function Registerpage() {
 
                             />
                           </div>
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-3">
                             <input
                               type="password"
                               id="form2Example27"
@@ -110,7 +110,7 @@ function Registerpage() {
                           <a className="small text-muted" href="#!">
                             Forgot password?
                           </a>
-                          <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                          <p className="mb-0 pb-lg-2" style={{ color: "#393f81" }}>
                             Already have an account?{" "}
                             <Link to="/login" style={{ color: "#393f81" }}>
                               Login Here
@@ -131,7 +131,7 @@ function Registerpage() {
             </div>
           </div>
         </section>
-        <footer className="bg-light text-center text-lg-start">
+        <footer className="bg-light text-center text-lg-start" style={{marginTop:'3vh'}}>
           <div
             className="text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
