@@ -112,7 +112,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("authTokens")
         navigate("/login")
         swal.fire({
-            title: "YOu have been logged out...",
+            title: "You have been logged out...",
             icon: "success",
             toast: true,
             timer: 6000,
